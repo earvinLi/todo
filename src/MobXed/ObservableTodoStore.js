@@ -31,7 +31,7 @@ class ObservableTodoStore {
 	}
 
 	addTodo(task) {
-		this.todos.push({ task, completed: false, assignee: null });
+		if (task) this.todos.push({ task, completed: false, assignee: null });
 	}
 }
 
