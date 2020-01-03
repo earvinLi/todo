@@ -6,11 +6,14 @@ import {
   observable,
 } from 'mobx';
 
+// Internal Dependencies
+import ObservablePeopleStore from './ObservablePeopleStore';
+
 // Store Definition
 class ObservableTodoStore {
 	todos = [
-    { task: 'Buy Milk', completed: false, assignee: null },
-    { task: 'Buy Beer', completed: false, assignee: null }
+    { task: 'Buy Milk', completed: false, assignee: ObservablePeopleStore[0] },
+    { task: 'Buy Beer', completed: false, assignee: ObservablePeopleStore[1] }
   ];
   pendingRequests = 0;
 

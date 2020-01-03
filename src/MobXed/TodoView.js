@@ -16,7 +16,7 @@ const TodoViewWithObserver = observer(
           />
           { todo.task }
           { todo.assignee
-            ? <small>{ todo.assignee.name }</small>
+            ? <small>{ ` ${todo.assignee.name}` }</small>
             : null
           }
           {/* <RenderCounter /> */}
